@@ -1,0 +1,35 @@
+@import "~bootstrap/scss/bootstrap";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.my-card {
+    min-height: 460px;
+    transition: transform 0.5s;
+}
+
+.my-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.my-sidebar {
+    border-right: 10px solid #e2e2e2;
+    font-size: 20px;
+    height: 100vh;
+
+    li {
+        margin: 20px 0px;
+
+        a {
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

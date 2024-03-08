@@ -97,7 +97,7 @@
             </div>
         </nav>
 
-        <main class="">
+        <main class="my-content">
             <div class="row">
                 <div class="col-2 my-sidebar bg-dark">
                     <ul class="list-unstyled px-3">

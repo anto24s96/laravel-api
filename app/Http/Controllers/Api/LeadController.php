@@ -17,14 +17,27 @@ class LeadController extends Controller
         //RECUPERO I DATI
         $data = $request->all();
 
-        //CREO LA VALIDAZIONE
-        $validator = Validator::make($data, [
+        //CREO LE REGOLE
+        $rules = [
             'name'    => 'required|string|max:100',
             'surname' => 'required|string|max:100',
             'email'   => 'required|email|unique:leads',
             'phone'   => 'nullable|string|max:20',
             'content' => 'nullable|string',
-        ]);
+        ];
+
+        //CREO I MESSAGGI PERSONALIZZATI
+        $customMessages = [
+            'required' => 'Il campo :attribute è obbligatorio.',
+            'string'   => 'Il campo :attribute deve essere una stringa.',
+            'max'      => 'Il campo :attribute non può superare :max caratteri.',
+            'email'    => 'Inserisci un indirizzo email valido.',
+            'unique'   => 'Questo :attribute è già stato utilizzato.',
+
+        ];
+
+        //CREO LA VALIDAZIONE
+        $validator = Validator::make($data, $rules, $customMessages);
 
         //VERIFICO SE LA VALIDAZIONE FALLISCE
         if ($validator->fails()) {

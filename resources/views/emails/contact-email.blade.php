@@ -3,6 +3,6 @@
     Hai ricevuto una nuova email: <br>
     Nome: {{ $lead->name }} <br>
     Email: {{ $lead->email }} <br>
-    Messaggio: <br>
-    {{ $lead->content }}
+    Telefono: +{{ $lead->phone }} <br>
+    Messaggio: {{ $lead->content }}
 </p>

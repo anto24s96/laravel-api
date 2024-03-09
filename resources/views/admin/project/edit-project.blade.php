@@ -27,6 +27,8 @@
                             <label for="logo" class="form-label">Logo:</label>
                             @if ($project->logo != null)
                                 <img src="{{ asset('storage/' . $project->logo) }}" alt="cover_image" class="w-25">
+                            @else
+                                <img src="{{ Vite::asset('resources/img/folder.png') }}" alt="folder" class="w-25">
                             @endif
                             <input type="file" class="form-control @error('logo') is-invalid @enderror mt-4" id="logo" name="logo" value="{{ $project['logo'] }}">
                             @error('logo')

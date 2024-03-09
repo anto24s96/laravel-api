@@ -104,3 +104,10 @@ body {
 .my_card_body {
     background-color: $navy;
 }
+
+.my-form {
+    border: 5px solid $night;
+    border-radius: 20px;
+    color: $cold;
+    font-weight: bolder;
+}

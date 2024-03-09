@@ -4,6 +4,77 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+$dark_blu: #070f2b;
+$navy: #1b1a55;
+$cold: #535c91;
+$night: #9290c3;
+
+body {
+    overflow-y: hidden;
+}
+
+.main-container {
+    overflow-x: hidden;
+}
+
+.content-container {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: calc(100vh - 70px);
+}
+.my-nav {
+    background-color: $dark_blu;
+}
+
+.my-sidebar {
+    background-color: $dark_blu;
+    padding: 30px;
+    height: calc(100vh - 70px);
+    border-right: 10px solid #e2e2e2;
+    text-transform: uppercase;
+    font-size: 20px;
+
+    li {
+        margin: 20px 0px;
+
+        a {
+            text-decoration: none;
+            color: white;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.my_button {
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: $cold;
+    color: white;
+    font-size: 12px;
+    border: 1px solid black;
+    text-transform: uppercase;
+    text-decoration: none;
+
+    &:hover {
+        background-color: $night;
+        color: #000000;
+        border: 1px solid #6c6c6c;
+    }
+}
+
+.my-table-style {
+    border: 1px solid lightgray;
+    border-radius: 30px;
+
+    th {
+        text-transform: uppercase;
+    }
 }
 
 .my-card {
@@ -14,24 +85,6 @@
 .my-card:hover {
     transform: scale(1.1);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-}
-
-.my-sidebar {
-    border-right: 10px solid #e2e2e2;
-    font-size: 20px;
-    height: 100vh;
-
-    li {
-        margin: 20px 0px;
-
-        a {
-            text-decoration: none;
-
-            &:hover {
-                text-decoration: underline;
-            }
-        }
-    }
 }
 
 .card_top {
@@ -46,4 +99,8 @@
         justify-content: center;
         align-items: center;
     }
+}
+
+.my_card_body {
+    background-color: $navy;
 }
